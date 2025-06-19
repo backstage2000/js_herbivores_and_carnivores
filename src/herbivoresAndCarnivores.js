@@ -13,7 +13,9 @@ class Animal {
   }
 
   takeDamage(value) {
-    if (!this.isAlive) return;
+    if (!this.isAlive) {
+      return;
+    }
     this.health -= value;
     this.healthCheck();
   }
@@ -33,10 +35,9 @@ class Animal {
 
 class Herbivore extends Animal {
   // write your code here
-  hidden = false;
-
   constructor(name) {
     super(name);
+    this.hidden = false;
   }
 
   hide() {
